@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Frivillig uppgift 5.2.1 Epost-mottagning utan bifogade filer </title>
+	</head>
+	<body>
+	<p>
+		Get your email from a server by entering information below.
+	</p>
+		<form method="post" action="getMail.php">
+			<table>
+				<tr>
+					<td>
+					Username: 
+					</td>
+					<td>
+						<input type="text" value="wiiala" name="usr"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					Password:
+					</td>
+					<td>
+						<input type="password" name="passwd"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Server Address:
+					</td>
+					<td>
+						<input type="text" value="mail.dsv.su.se" name="server_addr"/>
+ 					</td>
+				</tr>
+				<tr>
+					<td>
+					Server Port:
+					</td>
+					<td>
+						<input type="text" value="110" name="server_port"/>
+					</td>
+				</tr>
+			</table>
+			<input type="submit" name="getmail" value="Get email"/>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<html>
+	<head>
+	<title>5.1.2 Meddelandehantering nytt test</title>
+
+	</head>
+	<body>
+	<form method="post" enctype="multipart/form-data" action="Mail_skicka.php">
+		<table>
+			<tr>
+				<td>
+					Från:
+				</td>
+				<td>
+					<input type="text" name="fran"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Till:
+				</td>
+				<td>
+					<input type="text" name="till"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Cc:
+				</td>
+				<td>
+					<input type="text" name="cc"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Bcc:
+				</td>
+				<td>
+					<input type="text" name="bcc"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Rubrik:
+				</td>
+				<td>
+					<input type="text" name="arande"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Meddelande:
+				</td>
+				<td>
+					<textarea name="meddelande" rows="5" cols="15"></textarea>
+				</td>
+			</tr>
+			<tr>
+			<tr>
+				<td>
+					File1:
+				</td>
+				<td>
+					<input name="filen[]"  type="file" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					File2:
+				</td>
+				<td>
+					<input name="filen[]"  type="file" />
+				</td>
+			</tr>
+				<td>
+					Lössenord:
+				</td>
+				<td>
+					<input type="password" name="losenord"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" value="Skicka" name="Send"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	</body>
+</html>

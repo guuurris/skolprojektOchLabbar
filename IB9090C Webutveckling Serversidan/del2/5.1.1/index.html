@@ -1,0 +1,73 @@
+<html>
+	<head>
+	<title>5.1 Meddelandehantering</title>
+	</head>
+	<body>
+	<form method="post" action="messageSend.php">
+		<table>
+			<tr>
+				<td>
+					Från:
+				</td>
+				<td>
+					<input type="text" name="from"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Till:
+				</td>
+				<td>
+					<input type="text" name="reciever"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Cc:
+				</td>
+				<td>
+					<input type="text" name="CC"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Bcc:
+				</td>
+				<td>
+					<input type="text" name="BCC"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Rubrik:
+				</td>
+				<td>
+					<input type="text" name="title"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Meddelande:
+				</td>
+				<td>
+					<textarea name="message" rows="5" cols="15"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Lössenord:
+				</td>
+				<td>
+					<input type="password" name="passwd"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" value="Skicka" name="Send"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	</body>
+</html>

@@ -1,0 +1,17 @@
+body
+{
+font-family:verdana;
+background-color:rgb(249,251,254);
+}
+
+table{font-size:80%;background:black;}
+a{color:#69a4e3;text-decoration:none;font:bold}
+a:hover{color:yellow}
+td.menu{background:black}
+
+table.menu
+{
+font-size:80%;
+position:absolute;
+visibility:hidden;
+}

@@ -1,0 +1,147 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 20px 0;
+	padding: 0;
+	background: #FFFFFF url(images/img1.gif);
+	font: normal small Arial, Helvetica, sans-serif;
+	color: #666666;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-style: italic;
+	color: #A33000;
+}
+
+h2 {
+	letter-spacing: -1px;
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin: 0;
+}
+
+p, ul, ol, blockquote {
+	margin-top: 0;
+}
+
+a:link {
+	text-decoration: none;
+	color: #A33000;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+li {
+	color: #A33000;
+}
+
+li a:link {
+	border-bottom: 1px dotted #A33000;
+	color: #666666;
+}
+
+li a:hover {
+	border-bottom: 1px solid #A33000;
+	text-decoration: none;
+	color: #A33000;
+}
+
+img.float {
+	float: left;
+	margin: 5px 15px 10px 0;
+	border: 5px solid #A33000;
+}
+
+/* Header */
+
+#header {
+	width: 700px;
+	height: 160px;
+	margin: 0 auto;
+	padding: 10px;
+	background: #A33000 url(images/img3.jpg) no-repeat 10px 10px;
+}
+
+#header * {
+	margin: 0;
+	padding: 0;
+	float: left;
+	text-decoration: none;
+	font-size: 18px;
+	font-style: italic;
+	color: #FFFFFF;
+}
+
+#header h1 {
+	padding: 128px 0 0 18px;
+	font-weight: bold;
+}
+
+#header h2 {
+	padding: 128px 0 0 0;
+}
+
+/* Content */
+
+#content {
+	width: 700px;
+	margin: 0 auto;
+	background: #FFFFFF url(images/img2.gif);
+	border: 10px solid #A33000;
+	border-top: none;
+}
+
+#colOne {
+	float: left;
+	width: 180px;
+	padding: 20px 10px;
+}
+
+#colOne ul {
+	margin-left: 0;
+	padding-left: 1em;
+	list-style: square inside;
+}
+
+#colTwo {
+	float: left;
+	width: 280px;
+	padding: 20px 10px;
+}
+
+#colThree {
+	float: left;
+	width: 180px;
+	padding: 20px 10px;
+}
+
+#colThree ul {
+	margin-left: 0;
+	padding-left: 1em;
+	list-style: square inside;
+}
+
+/* Footer */
+
+#footer {
+	padding: 10px;
+	text-align: center;
+	font-size: smaller;
+}
+
+#footer * {
+	color: #D6947A;
+}

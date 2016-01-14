@@ -1,0 +1,31 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/pagesColoring.css" /> 
+</head>
+	<body>
+		<form action="logmein.php" enctype="multipart/form-data" method="Post">
+			<table align=center>
+				<tr>
+					<td>
+					<h1> 
+						{$upload}
+					<h1>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{$file}
+					</td>
+					<td>
+						<input type="file" name="file"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" name="upload" value="{$sendFile}"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

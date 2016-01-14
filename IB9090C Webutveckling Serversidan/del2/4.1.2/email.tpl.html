@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title> 4.1.2 Information inbakad i formulär</title>
+	</head>
+	<body>
+		<p>
+			Namn: {$namn}
+		</p>
+		<p>
+			Email: {$emailadress}
+		</p>
+		<form  method="post" action="mailto:{$emailadress}?subject=Meddelande från {$namn} " >
+			<input type="submit" value="Skicka mail" />
+		</form>
+
+	</body>
+
+</html>

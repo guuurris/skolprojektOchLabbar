@@ -1,0 +1,125 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html charset="utf-8">
+<script>
+function clear_input(toClear)
+{
+	toClear.value = "";
+}
+
+</script>
+<style> 
+
+div.sokrecept {  
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 540px;
+	  height: 590px;
+	  border:0px solid #000;
+} 
+	
+div.ingrediens {
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 518;
+	  height: 180px;
+	  border:1px solid #000;
+
+} 
+
+h2.indent {
+	text-indent:40px;
+	float: top;
+}
+
+table.nytt {
+	width: 520px;
+	border: 0px solid #000;
+}
+</style>
+</head>
+<body>
+	<div class="sokrecept">
+	<br/>
+		<h2 class="indent">Sök Recept</h2>
+		<form name="searchRecipe" action="html_form_action.php" method="post" id="searchform">
+			<table class="nytt">
+				<tr>
+					<th align="left">
+						Kategori
+					</th>
+					<th align="left">
+						Tillagningstid
+					</th align="left">
+					<th align="left">
+						Svårighet
+					</th>
+					<th align="left">
+						Maträtt har bild
+					</th>
+				<tr>
+				<td>
+					<select name="sok_kategori">
+						<option value="alla">Alla</option>
+						<option value="kott">Kött</option>
+						<option value="fisk">Fisk</option>
+						<option value="fagel">Fågel</option>
+						<option value="vegetarisk">Vegetarisk</option>
+						<option value="kyckling">Kyckling</option>
+					</select>	
+				</td>
+				<td align="top">
+					<select name="Tillagningstid">
+						<option value="noValue">(max)</option>
+						<option value="5">5 min</option>
+						<option value="10">10 min</option>
+						<option value="15">15 min</option>
+						<option value="20">20 min</option>
+						<option value="25">25 min</option>
+						<option value="30">30 min</option>
+						<option value="40">40 min</option>
+						<option value="50">50 min</option>
+						<option value="60">60 min</option>
+						<option value="90">90 min</option>
+						<option value="120">120 min</option>
+						<option value="150">150 min</option>
+					</select>
+				</td>
+
+				<td>	
+					<select name="Svarighet">
+						<option value="1">1 (lätt)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (svår)</option>
+					</select>
+				</td>
+				<td>	
+					<select name="har_bild">
+						<option value="any">Krävs inte</option>
+						<option value="ja">Ja</option>
+					</select>
+				</td>
+				</tr>
+			</table>
+			
+			<br/>
+			
+			Ingredienser som ska finns i recepten
+		<div class="ingrediens">
+			Plats för java välj ingredienser
+		</div>
+		
+		<p align="right">
+			<input type="submit" value="Rensa sökkriterier">&nbsp;<input type="submit" value="Förhandsgranska">
+		</p>
+		
+		</form>
+	</div>
+
+</body>

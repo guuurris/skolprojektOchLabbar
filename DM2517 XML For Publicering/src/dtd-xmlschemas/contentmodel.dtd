@@ -1,0 +1,22 @@
+<!ELEMENT xrecipe (user?, category+, ingredient*)>
+<!ELEMENT category (name, food*)>
+<!ELEMENT food (name, difficulty, cookingTime, description, procedure, image+, ingredient+, added, portions, portionType)>
+<!ELEMENT ingredient (name, quantity?)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT difficulty (#PCDATA)>
+<!ELEMENT cookingTime (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT procedure (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT added (#PCDATA)>
+<!ELEMENT user EMPTY>
+<!ELEMENT portions (#PCDATA)>
+<!ELEMENT portionType (#PCDATA)>
+
+<!ATTLIST quantity measureUnit (l|dl|cl|ml|msk|tsk|g|kg|krm|st) #REQUIRED>
+<!ATTLIST category position (left|center|right|none) #REQUIRED
+				   site (newRecipe|previewRecipe|addCategory|searchRecipe|showRecipe) #IMPLIED>
+				   <!--newRecipe används då man skapar nytt recept eller går tillbacka från en preview av ett recept -->
+<!ATTLIST user id id #REQUIRED>

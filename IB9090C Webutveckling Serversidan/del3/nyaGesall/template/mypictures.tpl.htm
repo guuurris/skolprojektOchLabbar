@@ -1,0 +1,27 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="../css/pagesColoring.css" /> 
+</head>
+<body>
+	{foreach $pictures as $pic}
+		{strip}
+			<table border="0" align="center"  >
+				<tr>	
+				  <td height=5%; ><h1>{$pic.title}</h1></td>
+				</tr>
+				<tr>
+					<td>
+						<img src="../upload_files/{$pic.src}" alt="picture" width="500"  />
+					</td>
+				</tr>
+				<tr>
+				  <td valign="top"> <p>{$pic.size}<br/></p><p></p></td>
+				</tr>
+			</table>
+			<br/>
+		{/strip}
+	{/foreach}
+
+</body>
+</html>

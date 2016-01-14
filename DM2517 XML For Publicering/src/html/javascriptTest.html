@@ -1,0 +1,106 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<script src="./javascript/recipe.js"></script>
+<style> 
+
+</style>
+</head>
+<body>
+
+	<form name="createRecipe" action="html_form_action.php" method="post">
+	
+	Namn: <input type="text" name="namn_ratt" value="(på rätten)" onclick=clear_input(this)> <br/><br/>
+		<table>
+			<tr>
+			<td>
+				<select name="Tillagningstid">
+					<option value="noValue">(max)</option>
+					<option value="5">5 min</option>
+					<option value="10">10 min</option>
+					<option value="15">15 min</option>
+					<option value="20">20 min</option>
+					<option value="25">25 min</option>
+					<option value="30">30 min</option>
+					<option value="40">40 min</option>
+					<option value="50">50 min</option>
+					<option value="60">60 min</option>
+					<option value="90">90 min</option>
+					<option value="120">120 min</option>
+					<option value="150">150 min</option>
+				</select>
+			</td>
+			<td>
+				<select name="Serveringsmangd_antal">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="6">6</option>
+					<option value="8">8</option>
+					<option value="10">10</option>
+				</select>	
+				<select name="Serveringsmangd_enhet">
+					<option value="st">styck</option>
+					<option value="port">portioner</option>
+				</select>
+			</td>
+			<td>	
+				<select name="Svarighet">
+					<option value="1">1 (lätt)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (svår)</option>
+				</select>
+			</td>
+			<td>	
+					<input type="file" name="pic" accept="image/*">
+					<input type="submit" value="ladda upp" >
+			</td>
+			</tr>
+		</table>
+		<table onchange="checkIngredientRow(this)" id="ingredientAdd">
+			<tr id="tableHead">
+				<th>Ta bort</th>
+				<th>Ingrediens</th>
+				<th>Mängd</th>
+				<th>Måttenhet</th>
+			</tr>
+		
+			<tr >
+			<td>
+				<button onclick="eraseRow(this)" type="button">x</button>
+			</td>
+			<td>
+				<select  name="Ingrediens">
+					<option value="">(max)</option>
+					<option value="5">Kaffe</option>
+					<option value="lök">Påse Lök</option>
+					<option value="15">Mat</option>
+				</select>
+			</td>
+			<td>
+				<select  name="Mangd">
+					<option value="">(max)</option>
+					<option value="5">Kaffe</option>
+					<option value="10">Påse Lök</option>
+					<option value="15">Mat</option>
+				</select>
+			</td>
+			<td>
+				<select  name="Entity">
+					<option value="">(max)</option>
+					<option value="dl">dl</option>
+					<option value="l">l</option>
+				</select>
+			</td>
+			</tr>
+			
+			
+		</table>
+		
+	</form>
+
+</body>

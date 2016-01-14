@@ -1,0 +1,197 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<script src="javascript/recipe.js">
+
+
+</script>
+<style> 
+
+textarea {
+    resize: none;
+}
+div.recept {  
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 540px;
+	  height: 590px;
+	  border:0px solid #000;
+} 
+	
+div.ingrediens {
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 500;
+	  height: 180px;
+	  border:1px solid #000;
+	  overflow-y:auto;
+} 
+
+h2.indent {
+	text-indent:40px;
+	float: top;
+}
+
+table.nytt {
+	width: 520px;
+	border: 0px solid #000;
+}
+
+
+</style>
+</head>
+<body>
+	<div class="recept">
+	<br/>
+		<h2 class="indent">Nytt Recept</h2>
+		<p class="indent" id="varning"/>
+		<form name="createRecipe" onsubmit="return validateForm()"  action="index.php" enctype="multipart/form-data" method="post" id="recipeform">
+			<p>Namn: <input type="text" name="namn_ratt" value="(på rätten)" onclick=clear_input(this)> 
+			</p>
+			<p>Kategori: <select  name="category">
+					<option value="" selected>(välj)</option>
+					<option value="K&#246;tt">K&#246;tt</option>
+					<option value="Fisk">Fisk</option>
+					<option value="Vegetariskt">Vegetariskt</option>
+				</select></p>
+			<table class="nytt">
+				<tr>
+					<th align="left">
+						Tillagningstid
+					</th>
+					<th>
+						Serveringsmängd
+					</th align="left">
+					<th>
+						Svårighet
+					</th>
+					<th align="left">
+						Bild på maträtten
+					</th>
+				<tr>
+				<td align="top">
+					<select name="Tillagningstid">
+						<option value="">(max)</option>
+						<option value="5">5 min</option>
+						<option value="10">10 min</option>
+						<option value="15">15 min</option>
+						<option value="20">20 min</option>
+						<option value="25">25 min</option>
+						<option value="30">30 min</option>
+						<option value="40">40 min</option>
+						<option value="50">50 min</option>
+						<option value="60">60 min</option>
+						<option value="90">90 min</option>
+						<option value="120">120 min</option>
+						<option value="150">150 min</option>
+					</select>
+				</td>
+				<td>
+					<select name="Serveringsmangd_antal">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="6">6</option>
+						<option value="8">8</option>
+						<option value="10">10</option>
+					</select>	
+					<select name="Serveringsmangd_enhet">
+						<option value="st">styck</option>
+						<option value="port">port</option>
+					</select>
+				</td>
+				<td>	
+					<select name="Svarighet">
+						<option value="1">1 (lätt)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (svår)</option>
+					</select>
+				</td>
+				<td>	
+					<input type="file" name="img" accept="image/*">
+				</td>
+				</tr>
+			</table>
+			
+			<br/>
+			
+			Ingredienser:
+		<div class="ingrediens">
+			
+			<table onchange="checkIngredientRow(this)" id="ingredientAdd">
+			<tr id="tableHead">
+				<th>Ta bort</th>
+				<th>Ingrediens</th>
+				<th>Mängd</th>
+				<th>Måttenhet</th>
+			</tr>
+		
+			<tr >
+			<td>
+				<button onclick="eraseRow(this)" type="button">x</button>
+			</td>
+			<td>
+				<select  name="Ingrediens[0][]">
+					<option value="" selected>(max)</option>
+					<option value="Kaffe">Kaffe</option>
+					<option value="lök">Påse Lök</option>
+					<option value="Mat">Mat</option>
+				</select>
+			</td>
+			<td>
+				<select  name="Ingrediens[1][]">
+					<option value="" selected>(max)</option>
+					<option value="1">1</option>
+					<option value="1.5">1.5</option>
+					<option value="2">2</option>
+					<option value="2.5">2.5</option>
+					<option value="3">3</option>
+					<option value="3.5">3.5</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+			</td>
+			<td>
+				<select  name="Ingrediens[2][]">
+					<option value="" selected>(max)</option>
+					<option value="dl">dl</option>
+					<option value="l">l</option>
+				</select>
+			</td>
+			</tr>
+			
+			
+		</table>
+			
+			
+		</div>
+			
+		<p>
+			Beskrivning (max 45 tecken):<br/>
+			<textarea rows="2" cols="62" name="description"  maxlength="45"></textarea>
+		</p>
+		<p>
+			Matlagningsprocedur:<br/>
+			<textarea rows="6" cols="62" name="procedure" maxlength="1024"></textarea>
+		</p>
+		<p align="right">
+			<input type="submit" name="site" value="previewRecipe">
+			</input>
+		</p>
+		</form>
+	</div>
+
+</body>

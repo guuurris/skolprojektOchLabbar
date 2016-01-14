@@ -1,0 +1,663 @@
+
+@media all /*DETTA FUNGERAR PÅ IPHONE 3GS och Windows Phone och android*/
+and (min-device-width : 319px)  /*ska kommenteras in igen*/
+and (max-device-width : 768px) { /* 768px :: device ska in i mitten när klart*/
+
+body {
+	margin: 2px 0;
+	padding: 0px;
+	background: #FFFFFF /*url(images/img1.gif)*/;
+	font: normal small Arial, Helvetica, sans-serif;
+	color: #A33000;
+}
+
+
+
+h1, h2, h3 {
+	margin-top: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-style: italic;
+	color: #A33000;
+}
+
+h2 {
+	letter-spacing: -1px;
+	font-size: 3em;
+	
+}
+
+h3 {
+	font-size: 2em;
+	margin: 0;
+}
+
+p, ul, ol, blockquote {
+	margin-top: 0;
+}
+
+button{
+	font-size:2em;
+}
+
+a:link {
+	text-decoration: none;
+	color: #A33000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+li {
+	color: #A33000;
+}
+
+li a:link {
+	border-bottom: 1px dotted #A33000;
+	color: #666666;
+}
+
+li a:hover {
+	border-bottom: 1px solid #A33000;
+	text-decoration: none;
+	color: #A33000;
+}
+
+img.float {
+	float: left;
+	margin: 5px 15px 10px 0;
+	border: 5px solid #A33000;
+}
+
+p.date{
+	color: #C0C0C0;
+	font-size: 0.6em !important;
+}
+
+a:link , a:visited, a:hover ,a:active, a:focus
+{text-decoration:none; color:black;}
+
+.simpleRecipeBox div
+{
+width:200px;
+min-height:70px;
+padding:2px;
+background-color:#CC5555;
+
+margin-bottom: 20px;
+}
+.simpleRecipeBox img
+{
+ max-height:30% !important;
+ max-width: 30% !important;
+ float:right;
+}
+.simpleRecipeBox h2
+{
+ text-align:center;
+ color:black;
+ font-size:0.6em !important;
+ margin: 2px 0 0px 0;
+}
+
+.simpleRecipeBox p
+{
+ text-indent:0px;
+ font-size:0.3em !important;
+ word-wrap:break-word;
+}
+
+p.testing{
+	font-size:1em;
+}
+
+.a
+{
+	text-align:right;
+}
+
+h1 {
+   margin: 2px 0 0px 0;
+}
+
+p {
+   margin: 2px 0 0px 0;
+}
+
+textarea {
+    resize: none;
+	width: 95%;
+	font-size: 0.50em;
+}
+div.recept {  
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 100%;
+	  /*height: 590px;*/
+	  border:0px solid #000;
+} 
+
+input {
+	font-size:0.75em !important;
+}
+p.prenumerate{
+	font-size: 1.4em !important;
+}
+
+p.foodcount{
+	font-size: 1em;
+	font-style: italic;
+	color: black;
+}
+
+p.nohits{
+	font-size: 2em;
+	color: red;
+	font-style: italic;
+}
+
+p.nohits-tips{
+	font-size: 1em;
+	color: grey;
+	font-style: italic;
+}
+
+select.mobile{
+	font-size:0.75em;
+}
+
+table.recept {
+	width:100%;}
+
+	
+div.ingrediens {
+      padding-top: 10px;  
+      padding-right: 2px;  
+      padding-bottom: 2px;  
+      padding-left: 2px;  
+	  width: 100%;
+	  height: 180px;
+	  border:1px solid;
+	  border-color:#D8D8D8 ;
+	  overflow-y:auto;
+	  font-size:2em;
+} 
+table.ingredients {
+	width:100%;
+}
+
+h2.indent {
+	text-indent:10px;
+	float: top;
+}
+
+table.nytt {
+	width: 100%;
+	border: 0px solid #000;
+	display:block;
+}
+
+div.sokrecept {  
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 100%;
+	  border:0px solid #000;
+} 
+
+select {
+	font-size:1.5em;
+}
+
+/* Header */
+
+#header {
+	width: 100%;
+	height: 60px;
+	margin: 2 auto;
+	padding: 2px 2px;
+	background: #A33000 2px 2px;
+	overflow: hidden;
+	display:block;
+}
+
+#header * {
+	margin: 0;
+	padding: 0px 0px;
+	float: left;
+	text-decoration: none;
+	
+	font-style: italic;
+	color: #FFFFFF;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#header h1 {
+	padding: 3px 0 0 18px;
+	font-size: 4em;
+	font-weight: bold;
+}
+#header h2{
+	padding: 30px 18px 0 0;
+	font-size: 25px;
+	font-style: bold;
+	float:right;
+	display:block;
+}
+
+
+
+/* Content */
+
+#content {
+	width: 100%px;
+	margin: 0 auto;
+	background: #FFFFFF url(images/img2.gif);
+	border: 2px solid #A33000;
+	border-top: none;
+	text-align:center;
+}
+
+#colOne {
+	float: left;
+	width: 200px;
+	padding: 2px 2px;
+	display:none;
+}
+
+#colOne ul {
+	margin-left: 0;
+	padding-left: 1em;
+	list-style: square inside;
+	display:none;
+}
+
+#colTwo {
+	float: left;
+	width: 100%;
+	padding: 2px 2px;
+	
+}
+
+#colTwo img{
+	width:60%;
+	overflow: hidden; 
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	
+	
+}
+#colTwo div{
+	width:99% !important;
+	padding:0px !important;
+	float:left !important;
+	font-size:2em;
+}
+#colTwo div.mobile{
+	float:left !important;
+}
+#colTwo table.noshow{
+	display:block;
+	font-size: 2.3em;/*2.3em*/
+}
+#colTwo h2{
+	font-size:5em;
+}
+#colTwo h2.indent{
+	font-size:2.5em;
+}
+
+#colTwo h2.mobile{
+	font-size:2.5em;
+}
+#colTwo h3{
+	font-size:4em;
+	text-align:left;
+}
+#colTwo p{
+	font-size:2em; /*3em showrecipe*/
+	text-align:left;
+}
+#colTwo p.noformat{
+	font-size:2em; /*3em showrecipe*/
+	text-align:left;
+}
+#colTwo ul {
+	font-size:3em;
+	text-align:left;
+}
+
+#colTwo th {
+	font-size:2em;
+}
+#colTwo th.noshow {
+	display:none;
+}
+#colTwo td.noshow {
+	display:none;
+}
+
+#colThree {
+	float: left;
+	width: 200px;
+	padding: 20px 10px;
+	display:none;
+}
+
+#colThree ul {
+	margin-left: 0;
+	padding-left: 1em;
+	list-style: square inside;
+	display:none;
+}
+
+/* Footer */
+
+#footer {
+	padding: 2px;
+	text-align: center;
+	font-size: smaller;
+}
+
+#footer * {
+	color: #D6947A;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-device-width : 769px) { /*original 1224px OBS kommentaren ska bort DEVICE ska in i mitten*/
+body {
+	margin: 20px 0;
+	padding: 0;
+	background: #FFFFFF url(images/img1.gif);
+	font: normal small Arial, Helvetica, sans-serif;
+	color: #A33000;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-style: italic;
+	color: #A33000;
+}
+
+h2 {
+	letter-spacing: -1px;
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin: 0;
+}
+
+p, ul, ol, blockquote {
+	margin-top: 0;
+}
+
+a:link {
+	text-decoration: none;
+	color: #A33000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+li {
+	color: #A33000;
+}
+
+li a:link {
+	border-bottom: 1px dotted #A33000;
+	color: #666666;
+}
+
+li a:hover {
+	border-bottom: 1px solid #A33000;
+	text-decoration: none;
+	color: #A33000;
+}
+
+img.float {
+	float: left;
+	margin: 5px 15px 10px 0;
+	border: 5px solid #A33000;
+}
+
+a:link , a:visited, a:hover ,a:active, a:focus
+{text-decoration:none; color:black;}
+.simpleRecipeBox div
+{
+width:200px;
+min-height:70px;
+padding:2px;
+background-color:#CC5555;
+
+margin-bottom: 20px;
+}
+.simpleRecipeBox img
+{
+ max-height:70px;
+ max-width:70px;
+ float:right;
+}
+.simpleRecipeBox h2
+{
+ text-align:center;
+ color:black;
+ font-size:16px;
+ margin: 2px 0 0px 0;
+}
+
+.simpleRecipeBox p
+{
+ text-indent:0px;
+ font-size:12px;
+ word-wrap:break-word;
+}
+.a
+{
+	text-align:right;
+}
+
+h1 {
+   margin: 2px 0 0px 0;
+}
+
+p {
+   margin: 2px 0 0px 0;
+}
+
+textarea {
+    resize: none;
+}
+
+div.leftcolumn{
+	padding-left: 40px;
+	float:left;
+}
+
+div.rightcolumn{
+	padding-right: 40px;
+	float:right;
+}
+
+p.foodcount{
+	font-size: 10px;
+	font-style: italic;
+	color: black;
+}
+
+p.nohits{
+	font-size: 18px;
+	color: red;
+	font-style: italic;
+}
+
+p.nohits-tips{
+	font-size: 12px;
+	color: grey;
+	font-style: italic;
+}
+
+div.recept {  
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 500px;
+	 /* height: 590px;*/
+	  border:0px solid #000;
+} 
+	
+div.ingrediens {
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 100%;
+	  height: 180px;
+	  border:1px solid;
+	  border-color:#D8D8D8 ;
+	  overflow-y:auto;
+} 
+
+h2.indent {
+	text-indent:40px;
+	float: top;
+}
+
+table.nytt {
+	width: 520px;
+	border: 0px solid #000;
+}
+
+div.sokrecept {  
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 500px;
+	  height: 590px;
+	  border:0px solid #000;
+} 
+
+/* Header */
+
+#header {
+	width: 1000px;
+	height: 160px;
+	margin: 0 auto;
+	padding: 10px;
+	background: #A33000 url(images/newheader.jpg) no-repeat 10px 10px;
+}
+
+#header * {
+	margin: 0;
+	padding: 0;
+	float: left;
+	text-decoration: none;
+	
+	font-style: italic;
+	color: #FFFFFF;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#header h1 {
+	padding: 128px 0 0 18px;
+	font-size: 30px;
+	font-weight: bold;
+}
+#header h2{
+	padding: 140px 18px 0 0;
+	font-size: 16px;
+	float:right;
+}
+
+
+
+/* Content */
+
+#content {
+	width: 1000px;
+	margin: 0 auto;
+	background: #FFFFFF url(images/img2.gif);
+	border: 10px solid #A33000;
+	border-top: none;
+}
+
+#colOne {
+	float: left;
+	width: 200px;
+	padding: 20px 10px;
+}
+
+#colOne ul {
+	margin-left: 0;
+	padding-left: 1em;
+	list-style: square inside;
+}
+
+#colTwo {
+	float: left;
+	width: 540px;
+	padding: 20px 10px;
+}
+
+#colThree {
+	float: left;
+	width: 200px;
+	padding: 20px 10px;
+}
+
+#colThree ul {
+	margin-left: 0;
+	padding-left: 1em;
+	list-style: square inside;
+}
+
+/* Footer */
+
+#footer {
+	padding: 10px;
+	text-align: center;
+	font-size: smaller;
+}
+
+#footer * {
+	color: #D6947A;
+}
+}
+

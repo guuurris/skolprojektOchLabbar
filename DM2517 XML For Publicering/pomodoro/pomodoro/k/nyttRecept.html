@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script>
+function clear_input(toClear)
+{
+	toClear.value = "";
+}
+
+</script>
+<style> 
+
+textarea {
+    resize: none;
+}
+div.recept {  
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 525px;
+	  height: 530px;
+	  border:0px solid #000;
+} 
+	
+div.ingrediens {
+      padding-top: 10px;  
+      padding-right: 10px;  
+      padding-bottom: 10px;  
+      padding-left: 10px;  
+	  width: 518;
+	  height: 180px;
+	  border:1px solid #000;
+
+} 
+
+h2.indent {
+	text-indent:40px;
+	float: top;
+}
+
+table.nytt {
+	width: 520px;
+	border: 0px solid #000;
+}
+
+a:link , a:visited, a:hover ,a:active, a:focus
+{text-decoration:none; color:black;}
+.simpleRecipeBox div
+{
+width:200px;
+padding:2px;
+background-color:#CC3333;
+
+margin-bottom: 20px;
+}
+.simpleRecipeBox img
+{
+ max-height:70px;
+ max-width:70px;
+ float:right;
+}
+.simpleRecipeBox h2
+{
+ text-align:center;
+ color:black;
+ font-size:20;
+ margin: 2px 0 0px 0;
+}
+
+.simpleRecipeBox p
+{
+ text-indent:10px;
+ font-size:13;
+ word-wrap:break-word;
+}
+.a
+{
+	text-align:right;
+}
+
+h1 {
+   margin: 2px 0 0px 0;
+}
+
+p {
+   margin: 2px 0 0px 0;
+}
+
+</style>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Xrecipe</title>
+
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+	<h1><a href="#">XRecipe</a></h1>
+	<h2><a href="#">Du är inloggad(tryck för att logga ut)</a></h2>
+</div>
+<div id="content">
+	<div id="colOne">
+	<br/><br/>
+		<h3>Senaste tillagda recepten</h3><br/>
+		<a class="simpleRecipeBox" href="#"> 
+			<div >
+			<img 
+				src="http://4.bp.blogspot.com/-fbq9HhzVlXE/T-yJSs9uu9I/AAAAAAAAEk0/PV2XBwasHnE/s640/HDhut+(40).jpg">
+			</img>
+			<h2>Recipe name</h2>
+			<p>Exempelrecept 1, en stor taco med stora möjligheter</p>
+			<p class="date">Tillagd: 2013-12-04</p>
+			</div>
+		</a>
+		<a class="simpleRecipeBox" href="#"> 
+			<div >
+			<img 
+				src="http://4.bp.blogspot.com/-fbq9HhzVlXE/T-yJSs9uu9I/AAAAAAAAEk0/PV2XBwasHnE/s640/HDhut+(40).jpg">
+			</img>
+			<h2>Recipe name</h2>
+			<p>Exempelrecept 1, en stor taco med stora möjligheter</p>
+			<p class="date">Tillagd: 2013-12-04</p>
+			</div>
+		</a>
+		<a class="simpleRecipeBox" href="#"> 
+			<div >
+			<img 
+				src="http://4.bp.blogspot.com/-fbq9HhzVlXE/T-yJSs9uu9I/AAAAAAAAEk0/PV2XBwasHnE/s640/HDhut+(40).jpg">
+			</img>
+			<h2>Recipe name</h2>
+			<p>Exempelrecept 1, en stor taco med stora möjligheter</p>
+			<p class="date">Tillagd: 2013-12-04</p>
+			</div>
+		</a>
+		<a class="simpleRecipeBox" href="#"> 
+			<div >
+			<img 
+				src="http://4.bp.blogspot.com/-fbq9HhzVlXE/T-yJSs9uu9I/AAAAAAAAEk0/PV2XBwasHnE/s640/HDhut+(40).jpg">
+			</img>
+			<h2>Recipe name</h2>
+			<p>Exempelrecept 1, en stor taco med stora möjligheter</p>
+			<p class="date">Tillagd: 2013-12-04</p>
+			</div>
+		</a>
+		
+		
+	</div>
+	<div id="colTwo">
+
+	<div class="recept">
+	<br/>
+		<h2 class="indent">Nytt Recept</h2>
+		<form name="createRecipe" action="html_form_action.php" method="post" id="recipeform">
+			Namn:<input type="text" name="namn_ratt" value="(på rätten)" onclick=clear_input(this)> <br/><br/>
+			<table class="nytt">
+				<tr>
+					<th align="left">
+						Tillagningstid
+					</th>
+					<th>
+						Serveringsmängd
+					</th align="left">
+					<th>
+						Svårighet
+					</th>
+					<th align="left">
+						Bild på maträtten
+					</th>
+				<tr>
+				<td align="top">
+					<select name="Tillagningstid">
+						<option value="noValue">(max)</option>
+						<option value="5">5 min</option>
+						<option value="10">10 min</option>
+						<option value="15">15 min</option>
+						<option value="20">20 min</option>
+						<option value="25">25 min</option>
+						<option value="30">30 min</option>
+						<option value="40">40 min</option>
+						<option value="50">50 min</option>
+						<option value="60">60 min</option>
+						<option value="90">90 min</option>
+						<option value="120">120 min</option>
+						<option value="150">150 min</option>
+					</select>
+				</td>
+				<td>
+					<select name="Serveringsmangd_antal">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="6">6</option>
+						<option value="8">8</option>
+						<option value="10">10</option>
+					</select>	
+					<select name="Serveringsmangd_enhet">
+						<option value="st">styck</option>
+						<option value="port">port</option>
+					</select>
+				</td>
+				<td>	
+					<select name="Svarighet">
+						<option value="1">1 (lätt)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (svår)</option>
+					</select>
+				</td>
+				<td>	
+					<input type="file" name="img" accept="image/*">
+				</td>
+				</tr>
+			</table>
+			
+			<br/>
+			
+			Ingredienser:
+		<div class="ingrediens">
+			Plats för java
+		</div>
+			
+		<p>
+			Beskrivning (max 45 tecken):<br/>
+			<textarea rows="2" cols="62" name="beskrivning" form="recipeform" maxlength="45"></textarea>
+		</p>
+		<p>
+			Matlagningsprocedur:<br/>
+			<textarea rows="6" cols="62" name="procedur" form="recipeform"></textarea>
+		</p>
+		</form>
+	</div>
+	</div>
+	<div id="colThree">
+		<h3>Rekommenderade för dig, baserade på dina prenumerationer</h3>
+		
+		<a class="simpleRecipeBox" href="#"> 
+			<div >
+			<img 
+				src="http://4.bp.blogspot.com/-fbq9HhzVlXE/T-yJSs9uu9I/AAAAAAAAEk0/PV2XBwasHnE/s640/HDhut+(40).jpg">
+			</img>
+			<h2>Recipe name</h2>
+			<p>Exempelrecept 1, en stor taco med stora möjligheter</p>
+			<p class="date">Tillagd: 2013-12-04</p>
+			</div>
+		</a>
+		<a class="simpleRecipeBox" href="#"> 
+			<div >
+			<img 
+				src="http://4.bp.blogspot.com/-fbq9HhzVlXE/T-yJSs9uu9I/AAAAAAAAEk0/PV2XBwasHnE/s640/HDhut+(40).jpg">
+			</img>
+			<h2>Recipe name</h2>
+			<p>Exempelrecept 1, en stor taco med stora möjligheter</p>
+			<p class="date">Tillagd: 2013-12-04</p>
+			</div>
+		</a>
+		<a class="simpleRecipeBox" href="#"> 
+			<div >
+			<img 
+				src="http://4.bp.blogspot.com/-fbq9HhzVlXE/T-yJSs9uu9I/AAAAAAAAEk0/PV2XBwasHnE/s640/HDhut+(40).jpg">
+			</img>
+			<h2>Recipe name</h2>
+			<p>Exempelrecept 1, en stor taco med stora möjligheter</p>
+			<p class="date">Tillagd: 2013-12-04</p>
+			</div>
+		</a>
+		<a class="simpleRecipeBox" href="#"> 
+			<div >
+			<img 
+				src="http://4.bp.blogspot.com/-fbq9HhzVlXE/T-yJSs9uu9I/AAAAAAAAEk0/PV2XBwasHnE/s640/HDhut+(40).jpg">
+			</img>
+			<h2>Recipe name</h2>
+			<p>Exempelrecept 1, en stor taco med stora möjligheter</p>
+			<p class="date">Tillagd: 2013-12-04</p>
+			</div>
+		</a>
+	
+	</div>
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<div id="footer">
+	<p>Copyright &copy; 2013 XRecipe. Designed by K.Orellana & G.Wiiala</p>
+</div>
+</body>
+</html>

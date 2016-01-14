@@ -1,0 +1,33 @@
+body
+{
+background-color:rgb(111,168,228);
+background-image:url('../internal_pictures/backgroundpic.gif');
+#background-image:url('../clouds.png');
+background-repeat:repeat-x;
+background-attachment:fixed;
+}
+h1
+{
+font-family:"calibri";
+text-align:center;
+color:rgb(249,181,63)
+}
+h2
+{
+font-family:"verdana";
+text-align:center;
+color:rgb(122,0,43)
+}
+p
+{
+font-family:"calibri";
+font-size:125%;
+}
+table
+{
+background-color:rgb(105,164,227);
+height: 750px;
+width:500px;
+-moz-border-radius: 25px 20px / 25px 20px;
+border-radius: 25px 20px / 25px 20px;
+}

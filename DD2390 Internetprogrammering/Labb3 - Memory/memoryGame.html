@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script src="memory.js"></script>
+    <title>Memory Game Multiplayer</title>
+</head>
+<body onload="setTableLook()">
+    <h1 id="h1">Memory - multiplayer</h1>
+    <p id="players_turn">Player one turn!</p>
+    <table id="t">
+        <tr>     
+            <td><img id='0' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='1' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='2' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='3' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+        </tr>
+        <tr>
+            <td><img id='4' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='5' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='6' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='7' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+        </tr>
+        <tr>
+            <td><img id='8' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='9' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='10' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='11' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+        </tr>
+        <tr>
+            <td><img id='12' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='13' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='14' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+            <td><img id='15' src="cardNormal.png" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseClick(this)"/> </td>
+        </tr>
+    </table>
+    <table>
+        <tr > 
+            <td><p id="player1">player1 score: 0 </p> </td>
+        </tr>
+        <tr> 
+            <td><p id="player2">player2 score: 0 </p></td>
+        </tr>
+    <table>
+    <button id="btn" type="button" onmousedown="restartGame()">new game</button>
+</body>
+</html>

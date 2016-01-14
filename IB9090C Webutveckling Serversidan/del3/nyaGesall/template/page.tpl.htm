@@ -1,0 +1,25 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/pagesColoring.css" /> 
+</head>
+<body>
+	{foreach $posts as $post}
+		{strip}
+			<table border="0" align="center"  >
+				<tr>	
+				  <td height=5%; ><h1>{$post.title}</h1></td>
+				</tr>
+				<tr>
+				  <td height=5%;><h2>{$post.subtitle}</h2></td>
+				</tr>
+				<tr>
+					
+				  <td valign="top"> <p>{$post.message}<br/></p><p></p></td>
+				</tr>
+			</table>
+			<br/>
+		{/strip}
+	{/foreach}
+
+</body>
+</html>

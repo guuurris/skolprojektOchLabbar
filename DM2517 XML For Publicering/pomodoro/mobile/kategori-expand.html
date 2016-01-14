@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Xrecipe mobile</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<link rel="stylesheet" href="style.css" type="text/css" media="all">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Xrecipe"></a><p></p>
+</div>
+<div class="header">
+
+	<div class="top-bar">
+			<button class="menu-show"><img src="images/plus.png" alt="plus"></button>
+			<button class="menu-hide"><img src="images/minus.png" alt="minus"></button>
+
+		<div class="up-right">
+			<h3>Kategorier/Lamm</h3>
+        </div>
+        <div class="clear-both"></div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Kategorier</a></li>
+                <li><a href="#">Datorversion</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+<div class="content">
+	<div class="wrap">
+        <div class="post">
+        	<a href="#"><h2>Grillade lammlegs</h2></a>
+			<p>
+				Lamm för vardagskvällar, när ingenting annat känns roligt
+			</p>
+            <div class="date">Nov 23 2011 <span>|</span> av Pelle88</div>
+         </div>
+		  <div class="post">
+        	<a href="#"><h2>Lamm hamstrings</h2></a>
+			<p>
+				Ojojoj, detta är så gott att du kommer dö
+			</p>
+            <div class="date">Nov 23 2011 <span>|</span> av Pelle88</div>
+         </div>
+		  <div class="post">
+        	<a href="#"><h2>Lamm i kebabsås</h2></a>
+			<p>
+				Smaskens för den som inte orkar gå ner till turkkiosken
+			</p>
+            <div class="date">Nov 23 2011 <span>|</span> av Pelle88</div>
+         </div>
+    </div>
+</div>
+<div class="footer">
+	<div class="wrap bot-bar">
+    	&copy; 2013 Xrecipe &bull; design by Kristian Orellana & Gustav Wiiala
+        <div class="clear-both"></div>
+    </div>
+</div>
+<script type="text/javascript">
+	$('.menu').hide();
+	$('.menu-show').show();
+	$('.menu-hide').hide();
+	$('.menu-show').click(function(){
+		$('.menu-show').toggle();
+		$('.menu-hide').toggle();
+		$('.menu').slideDown();
+	});
+	$('.menu-hide').click(function(){
+		$('.menu-hide').toggle();
+		$('.menu-show').toggle();
+		$('.menu').slideUp();
+	});
+</script>
+
+</body>
+</html>

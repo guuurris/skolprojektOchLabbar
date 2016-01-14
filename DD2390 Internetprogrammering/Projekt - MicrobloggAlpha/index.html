@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html data-ng-app='createPost'>
+<head>
+   <title>Microblogg Alpha</title>
+   
+   <!-- Bootstrap css init  -->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+  
+   <!-- Bootstrap, angularjs och jquery javascript init -->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-collapse.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-tab.js"></script>
+   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-dropdown.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js" ></script> 
+  
+   <!-- Controller initiering -->
+   <script src='controller.js'></script> 	
+</head>
+<body data-ng-controller='simpleController'>
+ 
+<h1> <span class="label label-primary">Microblogg</span> <span class="label label-danger">alpha</span></h1>
+
+<!-- Tab menyn -->
+<ul id="myTab" class="nav nav-tabs">
+	<li class="active">
+	   <a href="#home" data-ng-click="uppdatePosts()" data-toggle="tab">
+	      Latest Posts
+	   </a>
+	</li>
+   
+	<li ng-if="!signedIn()"><a href="#home" data-ng-click="signIn()" tabindex="-1" data-toggle="tab">Log in <span class="glyphicon glyphicon-log-in"></span></a></li>
+	<li ng-if="signedIn()"><a href="#myPost" data-ng-click="uppdatePosts()" data-toggle="tab" >My Posts</a></li>
+	<li ng-if="signedIn()"><a href="#subscribe" data-ng-click="uppdateSubscriptions()" data-toggle="tab" >Subscriptions</a></li>
+	<li ng-if="signedIn()" class="dropdown">
+		<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">
+			<span class="glyphicon glyphicon-cog"></span>
+         	<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+			<li><a href="#newPost" tabindex="-1" data-toggle="tab">New Post <span class="glyphicon glyphicon-comment"></span></a></li>
+			<li><a href="#editProfile" tabindex="-1" data-toggle="tab">Edit Profile <span class="glyphicon glyphicon-pencil"></span></a></li>
+			<li><a href="#home" data-ng-click="signOut()"  tabindex="-1" data-toggle="tab">Sign Out <span class="glyphicon glyphicon-log-out"></span></a></li>
+		</ul>
+   </li>
+</ul>
+
+
+<!-- Tabbarnas innehåll skapas innaför div taggen (alla vyer finns alltså där i) -->
+<div id="myTabContent" class="tab-content">
+
+	  <!-- Visar all blogg-poster som inloggade användare tidigare lagt upp, finns flera filtreringsmöjligheter 
+		bland annat att se endast sina prenumerationer(gäller endast inloggade användare) -->
+	  <div class="tab-pane fade in active" id="home">
+		<div class="input-group">
+			<span class="input-group-addon"><b>Filter:</b></span>
+			<span ng-if="showstar()" data-toggle="buttons"class="input-group-addon">
+			  <button ng-click="starclicked()"><span  class="glyphicon glyphicon-star"></span> </button>  
+			</span>
+			<span ng-if="showstarempty()"class="input-group-addon">
+				<button ng-click="starclicked()"><span  class="glyphicon glyphicon-star-empty"></span> </button>  
+			</span>
+			<span class="input-group-addon">
+			   <span class="glyphicon glyphicon-user"></span>
+			</span>
+			<input type="text" ng-model='postfilter.upploader' class="form-control" placeholder="Upploader" />
+			<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+			<input type="text" ng-model='postfilter.title' class="form-control" placeholder="Subject"/>
+		</div>
+	  <!-- Visar alla poster med sorteringsfilter --> 
+		<div class="panel-group" id="accordion" >
+			  <div class="panel panel-default" data-ng-repeat="post in posts | filter:postfilter | filter:subscribed=starValue()| orderBy:'-upploaded' ">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" ng-href="#collapse{{$index}}">
+					      {{post.title}}
+					      <br/>Upploaded by: {{post.upploader}}, {{post.upploaded | date}}.
+					    </a>
+					</h4>
+				</div>
+				<div id="collapse{{$index}}" class="panel-collapse collapse">
+					<div class="panel-body">
+						{{post.content}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+   <!-- Visar de poster som användaren själv lagt upp -->
+     <div class="tab-pane fade in" id="myPost">
+
+		<div class="input-group">
+			<span class="input-group-addon"><b>Filter:</b></span>
+	 			<input type="text" ng-model="mypostfilter.title" class="form-control" placeholder="Subject"/>
+	 		<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+		</div>
+		  
+		<div class="panel-group" id="accordion" >
+		 
+		   <div class="panel panel-default" data-ng-repeat="post in posts | filter:mypostfilter  |  filter:userid=profile.userid | orderBy:'-upploaded' ">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" ng-href="#collapser{{$index}}">
+			          {{post.title}}
+			          <br/>Upploaded by: {{post.upploader}}, {{post.upploaded | date}}.
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapser{{$index}}" class="panel-collapse collapse">
+					<div class="panel-body">
+						{{post.content}}
+					</div>
+			    </div>
+		  	</div>
+		</div>
+   
+   </div>
+   
+   <!-- Ger möjlighet för användare att prenumerera på andra medlemmar -->
+   <div class="tab-pane fade in" id="subscribe">
+    <h2> <span class="label label-primary">Subscriptions</span></h2>
+		<div class="form-horizontal">
+			<div class="input-group">
+			 <span class="input-group-addon"><b>Filter:</b></span>
+		  		<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+		  		<input type="text" ng-model="memberfilter.nickname" class="form-control" placeholder="Nickname"/> 
+		  		
+		  		
+			</div>
+		   
+		   <!-- Visar alla medlemmar (kan sorteras efter nickname) --> 
+			 <div class="panel-group" id="accordion" >
+				 <div  data-ng-repeat="subscription in subscriptions | filter:memberfilter  |  orderBy:'nickname' ">
+				   <div class="panel panel-info">
+				   		<div class="panel-heading">Blogger: {{subscription.nickname}} <br/>Subscribing: <input type="checkbox" ng-model="subscription.subscribing" ng-true-value="yes" ng-false-value="no" ng-change="saveSubscription(subscription)"> {{subscription.subscribing}} (Subscription changes is automaticly saved)  </div>
+				  		<div class="panel-body">
+					  		 Sex: {{subscription.sex}} <br/>
+					  		 Description: {{subscription.description}} <br/><br/>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+   </div>
+   
+   
+   <!-- Ger användaren möjlighet att editera sin profil (inloggad användare) -->
+   <div class="tab-pane fade" id="editProfile">
+      <h2 > <span class="label label-primary">Edit Profile</span></h2>
+		<div class="form-horizontal">
+			
+			<!-- Namn och kort beskrivning kan fyllas i -->
+			<div class="input-group">
+		     	<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+			 	 <input type="text" class="form-control" ng-model="profile.myNickname" placeholder="Display Name"/> 
+			  	 <span class="input-group-addon"><span class="glyphicon glyphicon-book"></span></span>
+			  	 <input type="text" class="form-control" ng-model="profile.myDescription" placeholder="Describe yourself..."/> 
+			  	
+			  	<!-- När användare vill spara sina inställningar -->
+			  	<span class="input-group-btn">
+			  	 <button type="button" data-ng-click='uppdateOrSaveProfileSettings()' class="btn btn-primary">Save</button>  
+			  	</span>
+			</div>
+	     	
+	     		<!-- Användare får välja sitt kön-->
+	     	<div class="control-group">
+				<label class="control-label">Sex</label>
+				<div class="controls">
+					<label class="radio">
+					  <input type="radio" ng-model="profile.mySex" value="Male">
+					  Male
+					</label>
+					<label class="radio">
+					  <input type="radio" ng-model="profile.mySex" value="Female">
+					  Female
+					</label>
+					<label class="radio">
+					  <input type="radio" ng-model="profile.mySex" value="">
+					  Neither
+			   		</label>
+				  </div>
+			</div>	
+		</div>
+	</div>
+   
+ 
+   <!-- Blogg funktionaliteten (Inloggad användare)-->
+   <div class="tab-pane fade" id="newPost">
+		<h2 > <span class="label label-primary">New Post</span></h2>
+	    <div class="form-horizontal">
+		 		<!-- Namnet på posten skrivs här.. -->
+			<div class="input-group">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+				<input type="text" class="form-control" data-ng-model="newPostSubject" placeholder="Subject">
+				 
+				<!-- Post sparas genom den här knappen -->
+				<span class="input-group-btn">
+					<button  ng-click="addPost()"type="button" class="btn btn-primary">Post</button>  
+				</span>
+			</div>
+			<!-- innehållet skrivs -->
+				  <textarea class="form-control" rows="3" data-ng-model="newPostContent"  placeholder="Just type away..."></textarea>	
+		</div> 
+   </div>
+   
+   
+</div>
+
+  <!-- Google API initierings script: (Place this asynchronous JavaScript just before your </body> tag) -->
+    <script type="text/javascript">
+      (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/client:plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+    </script>
+
+</body>
+</html>

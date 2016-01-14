@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>6.2.1 Relationsdatabas</title>
+	</head>
+	<body>
+		<p>
+			{$putInMessage}
+		</p>
+		<form method="post" action="index.php">
+			<table>
+
+				<tr>
+					<td>
+						Namn:
+					</td>
+					<td>
+						<input type="text" name="name"/>
+					</td>		
+				</tr>
+				<tr>
+					<td>
+						Email:
+					</td>
+					<td>
+						<input type="text" name="email"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Hemsida: 
+					</td>
+					<td>
+						<input type="text" name="website"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Kommentar:
+					</td>
+					<td>
+						<textarea  rows="10" cols="15" name="comment"></textarea>
+					</td>
+				</tr>
+				</table>
+				<p>
+					<input type="submit" name="add" value="Lägg till kommentar"/>
+				</p>
+		</form>
+		<p>
+			{$PostInformation}
+		</p>
+		{foreach $Posts as $post}
+		{strip}
+		<p>
+			_______________________________
+		</p>
+		<p>
+			Namn: {$post.name}
+		</p>
+		<p>
+			Email: &#32;
+			<A href=mailto:{$post.email}>
+				 {$post.email}
+			</A> 
+		</p>
+		<p>
+			Hemsida: &#32;
+			<A href={$post.web} >
+				{$post.web}
+			</A>
+		</p>
+		<p>
+			Kommentar: {$post.comment}
+		</p>
+		<p>
+			-- {$post.added} --
+		</p>
+		{/strip}
+		{/foreach}
+
+
+	</body>
+
+</html>

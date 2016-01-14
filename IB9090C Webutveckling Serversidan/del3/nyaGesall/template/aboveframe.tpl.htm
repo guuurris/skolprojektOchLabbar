@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>{$title}</title>
+<link rel="stylesheet" type="text/css" href="../css/menutable.css" /> 
+<script type="text/javascript" src="../javascript/menuscript.js"></script>
+</head>
+
+<body>
+<table width="500px" height="2,5%" align="center">
+ <tr bgcolor="#400400">
+  <td onmouseover="showmenu('home')" onmouseout="hidemenu('home')">
+   <a href="index.php" TARGET=pageFrame>{$homebutton}</a><br />
+   <table class="menu" id="home" width="120">
+   </table>
+  </td>
+  <td onmouseover="showmenu('about')" onmouseout="hidemenu('about')">
+   <a href="index.php?show=About" TARGET=pageFrame >{$aboutbutton}</a><br />
+   <table class="menu" id="about" width="120">
+   <tr><td class="menu"><a href="index.php?show=Page" TARGET=pageFrame >{$page}</a></td></tr>
+   <tr><td class="menu"><a href="index.php?show=Information" TARGET=pageFrame>{$contact}</a></td></tr>
+
+   </table>
+  </td>
+  <td onmouseover="showmenu('members')" onmouseout="hidemenu('members')">
+   <a href="index.php?show=Members" TARGET=pageFrame>{$membersbutton}</a><br />
+   <table class="menu" id="members" width="120">
+   <tr><td class="menu"><a href="index.php?show=Upload" TARGET=pageFrame>{$upload}</a></td></tr>
+   <tr><td class="menu"><a href="index.php?show=Profile" TARGET=pageFrame>{$profile}</a></td></tr>
+   </table>
+  </td>
+
+   <td onmouseover="showmenu('login')" onmouseout="hidemenu('login')">
+   <a href="index.php?show=Login" TARGET=pageFrame>{$loginbutton}</a><br />
+   <table class="menu" id="login" width="120"/>
+  </td>
+  
+  </td>
+ </tr>
+</table>
+</body>
+</html>

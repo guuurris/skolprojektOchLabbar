@@ -1,0 +1,133 @@
+<?xml-stylesheet type="text/xsl" href="mobilegen.xsl" encoding="UTF-8" version="1.0"?>
+<!DOCTYPE xrecipe SYSTEM "contentmodel.dtd">
+<xrecipe>
+	<ingredient> <name>Milk</name> </ingredient> 
+	<ingredient> <name>Water</name> </ingredient> 
+	<ingredient> <name>Meat</name> </ingredient> 
+	<ingredient> <name>Flour</name> </ingredient> 
+	<category position="none"> <name>Kött</name> </category> 
+	<category position="none"> <name>Fisk</name> </category> 
+	<category position="none"> <name>Vegetariskt</name> </category> 
+		<category position="none"> <name>aba</name> </category> 
+	<category position="none"> <name>sdsds</name> </category> 
+	<category position="none"> <name>rgrsgrsg</name> </category> 
+		<category position="none"> <name>arheahreh</name> </category> 
+	<category position="none"> <name>areharejrtj</name> </category> 
+	<category position="none"> <name>gfsjsgfjf</name> </category> 
+		<category position="none"> <name>sfgjfgsgdsgfds</name> </category> 
+	<category position="none"> <name>sftgkjyghk</name> </category> 
+	<category position="none"> <name>asdasds</name> </category> 
+	<user id="pnr19850626" loggedin="true"></user>
+	<category position="left">
+		<name>Kott</name>
+		<food>
+			<name>Kyckling Tikka Masala</name>
+			<difficulty>3</difficulty>
+			<cookingTime>45</cookingTime>
+			<description>Har ar en beskrivning av ratten</description>
+			<procedure>Har ar proceduren beskriven</procedure>
+			<image>images/food1.jpg</image>
+			<ingredient>
+				<name>Kottbit</name>
+				<quantity measureUnit="dl">1.5</quantity>
+			</ingredient>
+			<added>20130101</added>
+		</food>
+		
+		<food>
+			<name>Basala masala</name>
+			<difficulty>3</difficulty>
+			<cookingTime>45</cookingTime>
+			<description>Har är en beskrivning av ratten</description>
+			<procedure>Har ar proceduren beskriven</procedure>
+			<image>images/img4.jpg</image>
+			<ingredient>
+				<name>Kottbit</name>
+				<quantity measureUnit="dl">1.5</quantity>
+			</ingredient>
+			<added>20130101</added>
+		</food>
+	</category>
+
+
+
+	<category position="right">
+		<name>Kött</name>
+	
+		<food>
+			<name>Basala masala</name>
+			<difficulty>3</difficulty>
+			<cookingTime>45</cookingTime>
+			<description>What the fuck</description>
+			<procedure>Har är proceduren beskriven</procedure>
+			<image>images/taco-150x150.jpg</image>
+			<ingredient>
+				<name>Köttbit</name>
+				<quantity measureUnit="dl">1.5</quantity>
+			</ingredient>
+			<added>20130101</added>
+		</food>
+				<food>
+			<name>Kyckling Tikka Masala</name>
+			<difficulty>3</difficulty>
+			<cookingTime>45</cookingTime>
+			<description>Har ar en beskrivning av ratten</description>
+			<procedure>Har ar proceduren beskriven</procedure>
+			<image>images/taco-150x150.jpg</image>
+			<ingredient>
+				<name>Kottbit</name>
+				<quantity measureUnit="dl">1.5</quantity>
+			</ingredient>
+			<added>20130101</added>
+		</food>
+	</category>
+	
+	<!--sitetestare nedan: fungerande (addRecipe, showRecipe, addCategory, searchRecipe)-->
+	<category position="center" site="showRecipe">
+		<name>Kott</name>
+		<food>
+			<name>Centermat är gott</name>
+			<difficulty>3</difficulty>
+			<cookingTime>45</cookingTime>
+			<description>Har är en beskrivning av rätten</description>
+			<procedure>Här är en beskrivning av rätten som du aldrig kommer vilja äta för att du är vegeteriabn din lilla lilla dumma människa! Fattar du inte det!?Här är en beskrivning av rätten som du aldrig kommer vilja äta för att du är vegeteriabn din lilla lilla dumma människa! Fattar du inte det!?Här är en beskrivning av rätten som du aldrig kommer vilja äta för att du är vegeteriabn din lilla lilla dumma människa! Fattar du inte det!?Här är en beskrivning av rätten som du aldrig kommer vilja äta för att du är vegeteriabn din lilla lilla dumma människa! Fattar du inte det!?</procedure>
+			<image>images/food1.jpg</image>
+			<ingredient>
+				<name>Köttbit</name>
+				<quantity measureUnit="st">1.5</quantity>
+			</ingredient>
+			<ingredient>
+				<name>Kalasstek</name>
+				<quantity measureUnit="st">2</quantity>
+			</ingredient>
+			<ingredient>
+				<name>Bautastek</name>
+				<quantity measureUnit="st">5</quantity>
+			</ingredient>
+			<added>20130101</added>
+		</food>
+		<food>
+			<name>bigfood är äckligt</name>
+			<difficulty>3</difficulty>
+			<cookingTime>45</cookingTime>
+			<description>Har är en beskrivning av rätten</description>
+			<procedure>Här är en beskrivning av rätten som du aldrig kommer vilja äta för att du är vegeteriabn din lilla lilla dumma människa! Fattar du inte det!?Här är en beskrivning av rätten som du aldrig kommer vilja äta för att du är vegeteriabn din lilla lilla dumma människa! Fattar du inte det!?Här är en beskrivning av rätten som du aldrig kommer vilja äta för att du är vegeteriabn din lilla lilla dumma människa! Fattar du inte det!?Här är en beskrivning av rätten som du aldrig kommer vilja äta för att du är vegeteriabn din lilla lilla dumma människa! Fattar du inte det!?</procedure>
+			<image>images/food1.jpg</image>
+			<ingredient>
+				<name>Köttbit</name>
+				<quantity measureUnit="st">1.5</quantity>
+			</ingredient>
+			<ingredient>
+				<name>Kalasstek</name>
+				<quantity measureUnit="st">2</quantity>
+			</ingredient>
+			<ingredient>
+				<name>Bautastek</name>
+				<quantity measureUnit="st">5</quantity>
+			</ingredient>
+			<added>20130101</added>
+		</food>
+		
+	</category>
+
+</xrecipe>
